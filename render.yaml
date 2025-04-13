@@ -1,0 +1,14 @@
+
+services:
+  - type: web
+    name: car-comparison-api
+    env: python
+    plan: free
+    region: frankfurt
+    buildCommand: ""
+    startCommand: "python app.py"
+    autoDeploy: true
+    sourceDir: .
+    envVars:
+      - key: FLASK_ENV
+        value: production
